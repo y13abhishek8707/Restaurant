@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FastFood & Hotel Booking</title>
+  <link rel="stylesheet" href="style5.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <header>
+    <h1>🍴 FastFood & SeaView Hotel</h1>
+    <p id="datetime"></p>
+    
+  </header>
+
+  <nav>
+    <a href="#food">Food Menu</a>
+    <a href="#rooms">Hotel Rooms</a>
+    <a href="#order">Order</a>
+  </nav>
+
+  <main>
+    <!-- Food Menu -->
+    <section id="food">
+      <h2>🍔 Our Dishes</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="burger.jpg" alt="Burger" />
+          <h3>Burger</h3><p>₹149</p>
+        </div>
+        <div class="card">
+          <img src="Pizza.jpg" alt="Pizza" />
+          <h3>Pizza</h3><p>₹180</p>
+        </div>
+        <div class="card">
+          <img src="fri.jpg" alt="Fries" />
+          <h3>Chicken Biryani</h3><p>₹150</p>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="rooms">
+      <h2>🛏 Hotel Rooms</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="Room1.jpg" alt="Standard Room" />
+          <h3>Standard Room</h3><p>₹1160/night</p>
+        </div>
+        <div class="card">
+          <img src="Room2.jpg" alt="Luxury Room" />
+          <h3>Luxury Room</h3><p>₹2390/night</p>
+        </div>
+        <div class="card">
+          <img src="Lux.jpg" alt="Sea View Suite" />
+          <h3>Sea View Suite</h3><p>₹4500/night</p>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="order">
+      <h2>🛒 Book Now</h2>
+      <form id="orderForm">
+       
+        <label>Name: <input type="text" id="name" required /></label>
+        <label>Email: <input type="email" id="email" required /></label>
+        <label>Mobile Number: <input type="tel" id="mobile" required /></label>
+        <label>City: <input type="text" id="city" required /></label>
+        <label>Address:
+          <textarea id="address" rows="2" required></textarea>
+        </label>
+
+        
+        <label>Food Item:
+          <select id="foodSelect" required>
+            <option value="Burger" data-price="149">Burger - ₹149</option>
+            <option value="Pizza" data-price="180">Pizza - ₹180</option>
+            <option value="Fries" data-price="150">Chicken Biryani - ₹150</option>
+          </select>
+        </label>
+        <label>Quantity: <input type="number" id="foodQty" min="1" value="1" /></label>
+
+        <label>Room Type:
+          <select id="roomSelect">
+            <option value="None" data-price="0">No Room</option>
+            <option value="Standard Room" data-price="₹1160">Standard Room - ₹1160</option>
+            <option value="Luxury Room" data-price="₹2390">Luxury Room - ₹2390</option>
+            <option value="Sea View Suite" data-price="₹4500">Sea View Suite - ₹4500</option>
+          </select>
+        </label>
+        <label>Nights: <input type="number" id="roomNights" value="1" min="1" /></label>
+
+        <button type="submit">Confirm Order</button>
+      </form>
+      <div id="confirmation"></div>
+    </section>
+  </main>
+
+  <script src="script3.js"></script>
+</body>
+</html>
